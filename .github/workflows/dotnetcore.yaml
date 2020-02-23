@@ -21,4 +21,6 @@ jobs:
         # Artifact name
         name: dll
         # Directory containing files to upload
-        path: CelogParserLib/bin/Release/*/*
+        path: CelogParserLib/bin/Release/*/*.dll
+
+
