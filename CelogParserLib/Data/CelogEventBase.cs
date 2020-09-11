@@ -20,5 +20,6 @@ namespace CelogParserLib.Data
 
         public override string ToString()
             => $"Handle={EventHandle}";
+        public IReadOnlyList<CeHandle> ContainsHadles => new []{ EventHandle };
     }
 }

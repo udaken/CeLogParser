@@ -98,5 +98,6 @@ namespace CelogParserLib.Data
             => $"Handle={ThreadHandle}, Process={ProcessHandle}, Module={ModuleHandle}, StartAddr={StartAddr}, Priority={Priority}, {Name}";
 
         public bool IsPsudoObject { get; } = false;
+        public IReadOnlyList<CeHandle> ContainsHadles => new []{ ThreadHandle };
     }
 }

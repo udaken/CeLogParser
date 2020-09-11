@@ -23,5 +23,6 @@ namespace CelogParserLib.Data
         public ulong FileOffset { get; }
         public uint Len { get; }
         public CePtr BaseAddress { get; }
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
 }

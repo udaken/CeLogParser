@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnsafeAndSpanExtension;
 using static CelogParserLib.Interop;
 
@@ -16,5 +17,6 @@ namespace CelogParserLib.Data
 
         public override string ToString()
             => $"CriticalSection Init on {Handle}";
+        public IReadOnlyList<CeHandle> ContainsHadles => new[] { Handle };
     }
 }

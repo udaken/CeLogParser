@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnsafeAndSpanExtension;
 using static CelogParserLib.Interop;
 
@@ -30,5 +31,6 @@ namespace CelogParserLib.Data
         public TimeSpan? DestroyAt { get; internal set; }
         public override string ToString()
             => $"Handle={Handle}, Options={Options}, InitSize={InitSize}, MaxSize={MaxSize}, Tid={Tid:X}, Pid={Pid:X}";
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
 }

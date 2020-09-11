@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnsafeAndSpanExtension;
 using static CelogParserLib.Interop;
@@ -35,5 +36,6 @@ namespace CelogParserLib.Data
             => $"Handle={EventHandle}, Manual={Manual}, InitialState={InitialState}, Create={Create}, {Name}";
 
         public bool IsPsudoObject => false;
+        public IReadOnlyList<CeHandle> ContainsHadles => new []{ EventHandle };
     }
 }

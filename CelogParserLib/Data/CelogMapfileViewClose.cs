@@ -16,5 +16,6 @@ namespace CelogParserLib.Data
 
         public CeHandle ProcessHandle { get; }
         public CePtr BaseAddress { get; }
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
 }

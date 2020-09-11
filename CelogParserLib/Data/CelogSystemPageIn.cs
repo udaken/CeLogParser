@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnsafeAndSpanExtension;
 using static CelogParserLib.Interop;
 namespace CelogParserLib.Data
@@ -23,5 +24,7 @@ namespace CelogParserLib.Data
         public bool Success { get; }
         public CeHandle ProcessHandle { get; }
         public ICelogProcessInfo? Process { get; }
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
+
 }

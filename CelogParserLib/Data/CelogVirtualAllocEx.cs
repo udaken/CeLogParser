@@ -26,6 +26,7 @@ namespace CelogParserLib.Data
 
         public override string ToString()
             => $"Handle={ProcessHandle}, Result={Result}, Address={Address}, Size={Size}, Type={Type}, Protect={Protect}";
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
     [Flags]
     public enum CeAllocType : uint

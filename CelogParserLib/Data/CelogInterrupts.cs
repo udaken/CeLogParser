@@ -19,5 +19,6 @@ namespace CelogParserLib.Data
         public IReadOnlyList<(uint TimeStamp, ushort SysInter, ushort NestingLevel)> IntData { get; }
         public override string ToString()
             => $"Discarded={Discarded}, IntData={string.Join(",", IntData)}";
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
 }

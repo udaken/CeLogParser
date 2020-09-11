@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnsafeAndSpanExtension;
 using static CelogParserLib.Interop;
 namespace CelogParserLib.Data
@@ -14,5 +15,6 @@ namespace CelogParserLib.Data
 
         public CeHandle Threadhandle { get; }
         public int Priority { get; }
+        public IReadOnlyList<CeHandle> ContainsHadles => new []{ Threadhandle };
     }
 }

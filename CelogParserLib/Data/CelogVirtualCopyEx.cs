@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnsafeAndSpanExtension;
 using static CelogParserLib.Interop;
 namespace CelogParserLib.Data
@@ -25,5 +26,6 @@ namespace CelogParserLib.Data
 
         public override string ToString()
             => $"DestProcessHandle={DestProcessHandle}, Dest={Dest}, SrcProcessHandle={SrcProcessHandle}, Source={Source}, Size={Size}, Protect={Protect}";
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
 }

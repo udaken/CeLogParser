@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using CelogParserLib.Data;
 
 namespace CelogParserLib
@@ -26,5 +27,8 @@ namespace CelogParserLib
 
         public override string ToString()
             => $"{Timestamp},{Id},CPU={Cpu} {Data?.ToString() ?? ""}";
+
+        public IReadOnlyList<CeHandle> ContainsHadles => Data is ICelogInfo logInfo ? logInfo.ContainsHadles : CeHandle.EmptyList;
+
     }
 }

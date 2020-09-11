@@ -22,5 +22,6 @@ namespace CelogParserLib.Data
 
         public override string ToString()
          => $"Handle={ThreadHandle}, Priority={Priority}";
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
 }

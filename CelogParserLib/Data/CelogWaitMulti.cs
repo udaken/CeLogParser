@@ -77,5 +77,7 @@ namespace CelogParserLib.Data
         {
             return $"Wait For {(IsSingle ? "Single Object" : (WaitAll ? "All Objects" : "Any Object"))} [{string.Join(",", WaitHandles)}] Timeout={(Timeout == 0xFFFFFFFF ? "INFINITE" : Timeout.ToString())}";
         }
+        public IReadOnlyList<CeHandle> ContainsHadles => WaitHandles;
+
     }
 }

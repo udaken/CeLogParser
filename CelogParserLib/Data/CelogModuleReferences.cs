@@ -48,5 +48,6 @@ namespace CelogParserLib.Data
         public override string ToString()
             => $"Handle={ModuleHandle}, {string.Join(",", ProcessRefCounts)}";
 
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
 }

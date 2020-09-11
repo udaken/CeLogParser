@@ -31,6 +31,7 @@ namespace CelogParserLib.Data
 
         public override string ToString()
             => $"Handle={Handle}, Bytes={Bytes}, Mem={Mem} Tid={Tid:X}, Pid={Pid:X}, CallerPID={CallerPID:X}";
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
     [Flags]
     public enum HeapFlags : uint

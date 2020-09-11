@@ -26,5 +26,6 @@ namespace CelogParserLib.Data
         public override string ToString()
             => $"DebugTrap";
 
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
 }

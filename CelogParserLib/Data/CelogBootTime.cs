@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnsafeAndSpanExtension;
 using static CelogParserLib.Interop;
 
@@ -17,5 +18,6 @@ namespace CelogParserLib.Data
 
         public override string ToString()
          => $"Action={Action}, {Name}";
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
 }

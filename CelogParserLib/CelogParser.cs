@@ -19,7 +19,7 @@ namespace CelogParserLib
         readonly byte[] _Buffer;
         readonly int _Length;
         readonly Dictionary<ushort, CelogEventHandler> _Handlers = new Dictionary<ushort, CelogEventHandler>();
-        public Encoding Encoding { get; set; } = Encoding.Default;
+        public Encoding Encoding { get; set; } = Encoding.ASCII;
 
         public CelogParser(Stream input)
         {
@@ -321,8 +321,8 @@ namespace CelogParserLib
                 CELID_DATA_LOSS => new CelogDataLoss(buffer),
                 CELID_SYNC_END => null,
                 CELID_LOG_MARKER => ProcessLogMarker(buffer, ref freq, ref defaultQuantum, out var _, out var _),
-                _ when (CELID_GWES <= id && id <= CELID_GWES_MAX) => buffer.ToArray(),
-                _ when (_Handlers.TryGetValue(id, out var handler)) => handler(id, buffer, new CelogEventHandlerContext(threads)),
+                _ when CELID_GWES <= id && id <= CELID_GWES_MAX => buffer.ToArray(),
+                _ when _Handlers.TryGetValue(id, out var handler) => handler(id, buffer, new CelogEventHandlerContext(threads)),
                 _ => ProcessUnknownLogId(id, buffer, out warning),
             };
         }

@@ -28,5 +28,6 @@ namespace CelogParserLib.Data
         public IReadOnlyList<uint> StackTrace { get; }
         public override string ToString()
             => $"Handle={Handle}, Mem={Mem}, Tid={Tid:X}, Pid={Pid:X}, CallerPID={CallerPID:X}";
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
 }

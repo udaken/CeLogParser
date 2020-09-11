@@ -7,7 +7,7 @@ namespace CelogParserLib.Data
 {
     public sealed class CelogModuleFree : ICelogInfo
     {
-        internal CelogModuleFree(ReadOnlySpan<byte> buffer, TimeSpan timestamp, List<CelogProcessCreate> process)
+        internal CelogModuleFree(ReadOnlySpan<byte> buffer, TimeSpan _, List<CelogProcessCreate> process)
         {
             ref readonly var data = ref buffer.AsRef<CEL_MODULE_FREE>();
             ModuleHandle = data.hModule;
@@ -25,5 +25,6 @@ namespace CelogParserLib.Data
 
         public override string ToString()
             => $"Handle={ModuleHandle}, Process={ProcessHandle}";
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
 }

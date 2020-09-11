@@ -32,5 +32,6 @@ namespace CelogParserLib.Data
         public IReadOnlyList<CePtr> StackTrace { get; }
         public override string ToString()
             => $"Handle={Handle}, Flags={Flags}, Bytes={Bytes}, MemOld={MemOld}, Mem={Mem}, Tid={Tid:X}, Pid={Pid:X}, CallerPID={CallerPID:X}, StackTrace={string.Join(",", StackTrace)}";
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
 }

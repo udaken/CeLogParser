@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnsafeAndSpanExtension;
 using static CelogParserLib.Interop;
 namespace CelogParserLib.Data
@@ -7,7 +8,7 @@ namespace CelogParserLib.Data
     {
         internal CelogCritSecLeave(ReadOnlySpan<byte> buffer, System.Collections.Generic.List<CelogThreadCreate> threads)
         {
-                        ref readonly var data = ref buffer.AsRef<CEL_CRITSEC_LEAVE>();
+            ref readonly var data = ref buffer.AsRef<CEL_CRITSEC_LEAVE>();
             Handle = data.hCS;
             OwnerThreadHandle = data.hOwnerThread;
 
@@ -19,5 +20,6 @@ namespace CelogParserLib.Data
         public ICelogThreadInfo? OwnerThread { get; }
         public override string ToString()
             => $"CriticalSection Thread:{OwnerThreadHandle} Leave on {Handle} ";
+        public IReadOnlyList<CeHandle> ContainsHadles => new[] { Handle };
     }
 }

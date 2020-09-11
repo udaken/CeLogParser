@@ -25,6 +25,7 @@ namespace CelogParserLib.Data
 
         public CelogExtraModuleInfo? ExtraInfo => null;
         public uint VMLen => _Info.VMLen;
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
 
     }
     public class CelogExtraProcessInfo : ICelogInfo
@@ -60,5 +61,6 @@ namespace CelogParserLib.Data
 
         public override string ToString()
             => $"Process={ProcessHandle}, CodeBase={CodeBase}, VMLen={VMLen}, {FullPath}";
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
 }

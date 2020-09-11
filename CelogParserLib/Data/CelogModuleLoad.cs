@@ -48,6 +48,7 @@ namespace CelogParserLib.Data
             => $"Process={ProcessHandle}, Module={ModuleHandle}, Base={Base}, {Name}";
 
         public uint VMLen => ExtraInfo?.VMLen ?? 0;
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
 
     }
 }

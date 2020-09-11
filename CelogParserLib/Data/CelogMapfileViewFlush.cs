@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnsafeAndSpanExtension;
 using static CelogParserLib.Interop;
 namespace CelogParserLib.Data
@@ -22,6 +23,7 @@ namespace CelogParserLib.Data
         public uint NumPages { get; }
         public CelogMapFlushType FlushType { get; }
         public CelogMapFlushFlags FlushFlags { get; }
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
 
     }
 }

@@ -24,5 +24,6 @@ namespace CelogParserLib.Data
 
         public override string ToString()
          => $"Handle={ThreadHandle}";
+        public IReadOnlyList<CeHandle> ContainsHadles => new []{ ThreadHandle };
     }
 }

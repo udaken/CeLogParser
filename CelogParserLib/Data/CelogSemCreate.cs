@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnsafeAndSpanExtension;
 using static CelogParserLib.Interop;
@@ -37,5 +38,6 @@ namespace CelogParserLib.Data
 
         public TimeSpan CreatedAt { get; }
         public TimeSpan? DeletedAt { get; internal set; }
+        public IReadOnlyList<CeHandle> ContainsHadles => new []{ SemaphoreHandle };
     }
 }

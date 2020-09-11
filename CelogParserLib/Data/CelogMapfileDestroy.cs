@@ -14,5 +14,6 @@ namespace CelogParserLib.Data
         }
 
         public CeHandle Handle { get; }
+        public IReadOnlyList<CeHandle> ContainsHadles => new []{ Handle };
     }
 }

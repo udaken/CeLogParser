@@ -23,5 +23,7 @@ namespace CelogParserLib.Data
 
         public override string ToString()
             => $"Handle={ProcessHandle}, Result={Result}, Address={Address}, Size={Size}, Type={Type}";
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
+
     }
 }

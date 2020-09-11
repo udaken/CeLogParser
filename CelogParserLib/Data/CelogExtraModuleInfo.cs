@@ -34,5 +34,6 @@ namespace CelogParserLib.Data
 
         public override string ToString()
             => $"Handle={ModuleHandle}, Flag={ModuleFlags}, VMLen={VMLen}, {FullPath}";
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
 }

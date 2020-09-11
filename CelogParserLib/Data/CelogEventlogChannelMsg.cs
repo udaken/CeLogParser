@@ -36,5 +36,6 @@ namespace CelogParserLib.Data
         public uint SequenceNumber { get; }
         public uint AlignmentPadding { get; }
         public IReadOnlyList<byte> UserData { get; }
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
 }

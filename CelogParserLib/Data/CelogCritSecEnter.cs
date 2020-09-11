@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnsafeAndSpanExtension;
 using static CelogParserLib.Interop;
 namespace CelogParserLib.Data
@@ -20,5 +21,6 @@ namespace CelogParserLib.Data
 
         public override string ToString()
             => $"CriticalSection Thread:{OwnerThreadHandle} Enter on {Handle} ";
+        public IReadOnlyList<CeHandle> ContainsHadles => new[] { Handle };
     }
 }

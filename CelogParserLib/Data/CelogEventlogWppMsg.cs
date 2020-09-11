@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices.ComTypes;
 using UnsafeAndSpanExtension;
 using static CelogParserLib.Interop;
@@ -17,5 +18,6 @@ namespace CelogParserLib.Data
         public uint MissedEvents { get; }
         public FILETIME KernelTime { get; }
         public FILETIME UserTime { get; }
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
 }

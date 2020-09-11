@@ -47,5 +47,6 @@ namespace CelogParserLib.Data
         internal Dictionary<CeHandle, ICelogModuleInfo> ModulesInternal = new Dictionary<CeHandle, ICelogModuleInfo>();
 
         public bool IsPsudoObject { get; } = false;
+        public IReadOnlyList<CeHandle> ContainsHadles => new []{ ProcessHandle };
     }
 }

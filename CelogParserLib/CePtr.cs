@@ -25,15 +25,19 @@ namespace CelogParserLib
         public override int GetHashCode()
             => Value.GetHashCode();
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool operator ==(uint left, CePtr right)
             => new CePtr(left).Equals(right);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool operator !=(uint left, CePtr right)
             => !(left == right);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool operator ==(CePtr left, uint right)
             => left.Equals(new CePtr(right));
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool operator !=(CePtr left, uint right)
             => !(left == right);
 
@@ -41,6 +45,7 @@ namespace CelogParserLib
         public static bool operator ==(CePtr left, CePtr right)
             => left.Equals(right);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool operator !=(CePtr left, CePtr right)
             => !(left == right);
 

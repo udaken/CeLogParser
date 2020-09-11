@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 namespace CelogParserLib
@@ -6,6 +7,8 @@ namespace CelogParserLib
     [System.Serializable]
     public readonly struct CeHandle : IEquatable<CeHandle>
     {
+        internal static readonly IReadOnlyList<CeHandle> EmptyList  = Array.Empty<CeHandle>();
+
         readonly uint Value;
 
         public static CeHandle InvalidHandleValue
@@ -31,6 +34,7 @@ namespace CelogParserLib
         public static bool operator ==(CeHandle left, CeHandle right)
             => left.Equals(right);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static bool operator !=(CeHandle left, CeHandle right)
             => !(left == right);
 

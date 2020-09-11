@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnsafeAndSpanExtension;
 using static CelogParserLib.Interop;
 namespace CelogParserLib.Data
@@ -22,5 +23,6 @@ namespace CelogParserLib.Data
         public string Name { get; }
 
         public bool IsPsudoObject => false;
+        public IReadOnlyList<CeHandle> ContainsHadles => new[] { Handle };
     }
 }

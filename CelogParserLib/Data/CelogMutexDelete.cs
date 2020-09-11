@@ -23,5 +23,6 @@ namespace CelogParserLib.Data
         
         public override string ToString()
             => $"Handle={MutexHandle}";
+        public IReadOnlyList<CeHandle> ContainsHadles => new []{ MutexHandle };
     }
 }

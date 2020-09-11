@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnsafeAndSpanExtension;
 using static CelogParserLib.Interop;
 
@@ -19,5 +20,6 @@ namespace CelogParserLib.Data
 
         public override string ToString()
          => $"RDP, ({nameof(OrderType)}:{OrderType}, {nameof(Order)}:{Order}, {nameof(TimeSpent)}:{TimeSpent})";
+        public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
 }
