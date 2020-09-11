@@ -12,6 +12,7 @@ namespace CelogParserLib
         public readonly byte Cpu;
         //readonly ArraySegment<byte> Payload;
         public object? Data { get; }
+        public ICelogProcessInfo? Process => CurrentThread?.Process;
         public ICelogThreadInfo? CurrentThread { get; }
 
         internal CelogData(TimeSpan timestamp, CelogId id, byte cpu, ArraySegment<byte> payload = default, ICelogThreadInfo? thread = null, object? data = default, long consumedTime = default)

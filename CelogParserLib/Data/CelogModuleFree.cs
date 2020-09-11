@@ -24,7 +24,7 @@ namespace CelogParserLib.Data
         public ICelogProcessInfo? Process { get; }
 
         public override string ToString()
-            => $"Handle={ModuleHandle}, Process={ProcessHandle}";
+            => $"ModuleHandle={ModuleHandle}, Process={ProcessHandle}";
         public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
 }

@@ -46,7 +46,7 @@ namespace CelogParserLib.Data
         public IReadOnlyList<(CeHandle ProcessHandle, uint RefCount)> ProcessRefCounts { get; }
 
         public override string ToString()
-            => $"Handle={ModuleHandle}, {string.Join(",", ProcessRefCounts)}";
+            => $"ModuleHandle={ModuleHandle}, {string.Join(",", ProcessRefCounts)}";
 
         public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }

@@ -51,7 +51,7 @@ namespace CelogParserLib.Data
                 }
             }
             else
-                warning = (new CelogWarningInfo($"Process:{ProcessHandle} Not Found."));
+                warning = new CelogWarningInfo($"Process:{ProcessHandle} Not Found.");
         }
         public CeHandle ProcessHandle { get; }
         public CePtr CodeBase { get; }

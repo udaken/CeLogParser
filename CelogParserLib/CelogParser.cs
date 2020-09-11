@@ -21,6 +21,8 @@ namespace CelogParserLib
         readonly Dictionary<ushort, CelogEventHandler> _Handlers = new Dictionary<ushort, CelogEventHandler>();
         public Encoding Encoding { get; set; } = Encoding.ASCII;
 
+        public bool RemoveTrailNewLine {get;set;} = true;
+
         public CelogParser(Stream input)
         {
             var stream = input ?? throw new ArgumentNullException(nameof(input));
@@ -281,8 +283,8 @@ namespace CelogParserLib
                 CELID_RAW_ULONG => MemoryMarshal.Cast<byte, uint>(buffer).ToArray(),
                 CELID_RAW_SHORT => MemoryMarshal.Cast<byte, short>(buffer).ToArray(),
                 CELID_RAW_USHORT => MemoryMarshal.Cast<byte, ushort>(buffer).ToArray(),
-                CELID_RAW_WCHAR => MemoryMarshal.Cast<byte, char>(buffer).ToNullTerminateString(),
-                CELID_RAW_CHAR => Encoding.GetString(buffer.Slice(buffer.GetAnsiStringLength())),
+                CELID_RAW_WCHAR => MemoryMarshal.Cast<byte, char>(buffer).TrimEnd(RemoveTrailNewLine ? stackalloc char[]{'\r', '\n'} : ReadOnlySpan<char>.Empty).ToNullTerminateString(),
+                CELID_RAW_CHAR => Encoding.GetString(buffer.Slice(0,buffer.GetAnsiStringLength())),
                 CELID_RAW_UCHAR => buffer.ToArray(),
                 CELID_RAW_FLOAT => MemoryMarshal.Cast<byte, float>(buffer).ToArray(),
                 CELID_RAW_DOUBLE => MemoryMarshal.Cast<byte, double>(buffer).ToArray(),

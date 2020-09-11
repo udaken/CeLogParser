@@ -33,7 +33,7 @@ namespace CelogParserLib.Data
         public CelogModuleReferences? References { get; internal set; }
 
         public override string ToString()
-            => $"Handle={ModuleHandle}, Flag={ModuleFlags}, VMLen={VMLen}, {FullPath}";
+            => $"ModuleHandle={ModuleHandle}, Flag={ModuleFlags}, VMLen={VMLen}, {FullPath}";
         public IReadOnlyList<CeHandle> ContainsHadles => CeHandle.EmptyList;
     }
 }
