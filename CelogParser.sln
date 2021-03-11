@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CelogParserLib", "CelogParserLib\CelogParserLib.csproj", "{FF10A576-EE01-491D-943A-708A72C5350C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CelogParserTest", "CelogParserTest\CelogParserTest.csproj", "{FB5429F3-0167-4385-973F-F2D59CC4F362}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF10A576-EE01-491D-943A-708A72C5350C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF10A576-EE01-491D-943A-708A72C5350C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF10A576-EE01-491D-943A-708A72C5350C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FF10A576-EE01-491D-943A-708A72C5350C}.Debug|x64.Build.0 = Debug|Any CPU
+		{FF10A576-EE01-491D-943A-708A72C5350C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FF10A576-EE01-491D-943A-708A72C5350C}.Debug|x86.Build.0 = Debug|Any CPU
+		{FF10A576-EE01-491D-943A-708A72C5350C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF10A576-EE01-491D-943A-708A72C5350C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF10A576-EE01-491D-943A-708A72C5350C}.Release|x64.ActiveCfg = Release|Any CPU
+		{FF10A576-EE01-491D-943A-708A72C5350C}.Release|x64.Build.0 = Release|Any CPU
+		{FF10A576-EE01-491D-943A-708A72C5350C}.Release|x86.ActiveCfg = Release|Any CPU
+		{FF10A576-EE01-491D-943A-708A72C5350C}.Release|x86.Build.0 = Release|Any CPU
+		{FB5429F3-0167-4385-973F-F2D59CC4F362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB5429F3-0167-4385-973F-F2D59CC4F362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB5429F3-0167-4385-973F-F2D59CC4F362}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FB5429F3-0167-4385-973F-F2D59CC4F362}.Debug|x64.Build.0 = Debug|Any CPU
+		{FB5429F3-0167-4385-973F-F2D59CC4F362}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FB5429F3-0167-4385-973F-F2D59CC4F362}.Debug|x86.Build.0 = Debug|Any CPU
+		{FB5429F3-0167-4385-973F-F2D59CC4F362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB5429F3-0167-4385-973F-F2D59CC4F362}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB5429F3-0167-4385-973F-F2D59CC4F362}.Release|x64.ActiveCfg = Release|Any CPU
+		{FB5429F3-0167-4385-973F-F2D59CC4F362}.Release|x64.Build.0 = Release|Any CPU
+		{FB5429F3-0167-4385-973F-F2D59CC4F362}.Release|x86.ActiveCfg = Release|Any CPU
+		{FB5429F3-0167-4385-973F-F2D59CC4F362}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {627974F7-0E52-452D-B696-FFBCCFC9A163}
+	EndGlobalSection
+EndGlobal

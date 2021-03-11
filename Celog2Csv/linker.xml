@@ -1,0 +1,5 @@
+<linker>
+    <assembly fullname="CeLogParserLib">
+        <type fullname="CelogParserLib.CelogData" preserve="all" />
+    </assembly>
+</linker>
